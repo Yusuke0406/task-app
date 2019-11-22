@@ -1,0 +1,35 @@
+.task-side{
+  float: left;
+  width: 20%;
+  height: calc(100vh - 56px);
+  background-color:ghostwhite;
+  .tasks{
+    height: 90%;
+    .task__box{
+      height: 25px;
+      padding:15px 15px;
+      display: flex;
+      .choise{
+        color: lavender;
+      }
+      .pen{
+        ;
+      }
+      &__name{
+      }
+      &__edit{
+        margin-left:150px;
+      }
+    }
+  }
+  .header{
+    background-color:#ffffff;
+    height: 10%;
+    .add{
+      text-decoration: none;
+      font-size: 40px;
+      margin: 0 auto;
+      line-height: 73px;
+    }
+  }
+}

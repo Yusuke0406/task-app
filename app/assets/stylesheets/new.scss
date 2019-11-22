@@ -1,0 +1,38 @@
+.login{
+  font-family: unset;
+  font-size: 20px;
+  text-align: center;
+  padding: 8px 19px;
+  margin: 2em 0;
+  color: #2c2c2f;
+  background: #cde4ff;
+  border-top: solid 5px #5989cf;
+  border-bottom: solid 5px #5989cf;
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 100px;
+  height: 400px;
+  &__field{
+    &__1{
+      padding: 15px;
+    }
+  }
+}
+.registration{
+  font-family: unset;
+  font-size: 20px;
+  text-align: center;
+  padding: 8px 19px;
+  margin: 2em 0;
+  color: #2c2c2f;
+  background: #cde4ff;
+  border-top: solid 5px #5989cf;
+  border-bottom: solid 5px #5989cf;
+  width: 400px;
+  margin: 0 auto;
+  margin-top: 100px;
+  height: 500px;
+  .field{
+    padding: 15px;
+  }
+}
