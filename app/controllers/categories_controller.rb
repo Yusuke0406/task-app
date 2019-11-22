@@ -12,6 +12,7 @@ class CategoriesController < ApplicationController
       redirect_to categories,notice:"カテゴリー作成しました"
     else
       render :new
+    end
   end
 
   private
