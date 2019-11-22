@@ -8,21 +8,20 @@
     .task__box{
       height: 25px;
       padding:15px 15px;
-      display: flex;
+      display: flex; 
       .choise{
         color: lavender;
       }
-      .pen{
-        ;
-      }
       &__name{
-<<<<<<< Updated upstream
-=======
+
         a:-webkit-any-link{
           text-decoration: none;
           color: black;
         }
->>>>>>> Stashed changes
+
+        .a:-webkit-any-link{
+          text-emphasis: none;
+        }
       }
       &__edit{
         margin-left:150px;
@@ -38,6 +37,7 @@
       font-size: 20px;
       margin: 0 auto;
       line-height: 73px;
+      color:black;
     }
     .form{
       line-height: 78px;
