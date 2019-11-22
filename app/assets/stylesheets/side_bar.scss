@@ -8,14 +8,14 @@
     .task__box{
       height: 25px;
       padding:15px 15px;
-      display: flex;
+      display: flex; 
       .choise{
         color: lavender;
       }
-      .pen{
-        ;
-      }
       &__name{
+        .a:-webkit-any-link{
+          text-emphasis: none;
+        }
       }
       &__edit{
         margin-left:150px;
@@ -30,6 +30,7 @@
       font-size: 40px;
       margin: 0 auto;
       line-height: 73px;
+      color:black;
     }
   }
 }
