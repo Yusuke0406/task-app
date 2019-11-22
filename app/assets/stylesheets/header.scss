@@ -24,8 +24,14 @@ html{
     display: flex;
     margin-left: 950px;
     color: white;
-    &__name{
-      padding-right: 30px;
+    &__btn{
+      text-decoration: none;
+      color: white;
+      &__2{
+        padding-right: 30px;
+        text-decoration: none;
+        color: white;
+      }
     }
   }
 }

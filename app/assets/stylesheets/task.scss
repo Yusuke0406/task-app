@@ -2,11 +2,11 @@
   float: right;
   width: 80%;
   height: calc(100vh - 56px);;
-  background-image: url("/card.jpg");
+  background-image: url("/avenue.jpg");
   background-size: cover;
   .form{
     padding:20px;
-    .form__message{
+    &__message{
       width: 100%;
       height: 40px;
       border-radius: 10px;
@@ -14,12 +14,12 @@
       opacity: 40%;
       position: relative;
     }
-    .form__mask__calender{
-      position: absolute;
-      right: 40px;
-      top: 85px;
+    &__mask__calender{
       .icon{
         color: white;
+        right: 45px;
+        bottom: 717px;
+        position: absolute;
       }
     }
   }
@@ -32,10 +32,10 @@
       height: 40px;
       border-radius: 3px;
       line-height: 40px;
-      &__name{
+      &__box{
         float: left;
         position: relative;
-        left: 20px;
+        margin-left: 20px;
       }
       &__btn{
         float: right;
