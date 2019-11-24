@@ -4,16 +4,18 @@
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title TaskApp
     = csrf_meta_tags
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    -# = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    -# = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
   %body
     = render 'layouts/notifications'
     .header
       .header__title
-        = link_to "TO-DO APP", "#", class:'todo'
+        = link_to "TO-DO APP", root_path, class:'todo'
       .header__right
         - if user_signed_in?
-          = link_to "Yusuke", new_user_registration_path, class: "header__right__btn__2"
+          = link_to current_user.name, edit_user_path(current_user), class: "header__right__btn__2"
           = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__right__btn"
         - else
           = link_to "ログイン", new_user_session_path, class: "header__right__btn__2"
