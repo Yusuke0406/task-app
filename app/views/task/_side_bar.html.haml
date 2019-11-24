@@ -1,7 +1,7 @@
 .task-side
   .tasks
-    .task__box
-      -current_user.categories.each do|category|
+    -current_user.categories.each do|category|
+      .task__box
         .task__box__name
           = link_to "categories" do
             = fa_icon 'list', class: 'choise' 

@@ -8,22 +8,18 @@
     .task__box{
       height: 25px;
       padding:15px 15px;
-      display: flex; 
-      .choise{
-        color: lavender;
-      }
       &__name{
-
+        float: left;
+        .choise{
+          color:gainsboro;
+        }
         a:-webkit-any-link{
           text-decoration: none;
           color: black;
         }
-
-        .a:-webkit-any-link{
-          text-emphasis: none;
-        }
       }
       &__edit{
+        float: right;
         margin-left:150px;
       }
     }
@@ -40,6 +36,9 @@
       color:black;
     }
     .form{
+      #fadetoggle_menu{
+        display: none;
+      }
       line-height: 78px;
       margin-right: 15px;
       &__message{
