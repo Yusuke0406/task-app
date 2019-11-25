@@ -5,6 +5,7 @@
   background-color:ghostwhite;
   .tasks{
     height: 90%;
+    overflow: scroll;
     .task__box{
       height: 25px;
       padding:15px 15px;

@@ -1,0 +1,18 @@
+.task
+  .form
+    .form__message
+      =form_for [@category,@task],url:category_tasks_path do|f|
+        =f.text_field :task_name, class: 'form__message', placeholder: 'Add category'
+        .form__mask
+          =f.label :deadline, class: 'form__mask__image' do
+            -# = fa_icon 'edit', class: 'icon'
+            = f.date_field :deadline, class: 'hidden'
+      -# = f.submit 'Send', class: 'form__submit'   
+  .works
+    -@tasks.each do|task|
+      .work
+        .work__box
+          =check_box_tag :check1
+          =label_tag :check1,task.task_name
+        .work__btn
+          = fa_icon 'heart-o', class: 'icon'

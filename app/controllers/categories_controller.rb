@@ -4,17 +4,13 @@ class CategoriesController < ApplicationController
     @user = current_user
   end
 
-  # def new
-  #   @category = Category.new
-  # end
-
   def create
     @category = Category.new(category_params)
     if @category.save
-      redirect_to categories_path
+      redirect_to category_tasks_path(@category), notice: 'カテゴリーが作成されました'
     else
       flash[:notice] = "失敗しました"
-      render :index
+      render root_path(current_user.id)
     end
   end
 
