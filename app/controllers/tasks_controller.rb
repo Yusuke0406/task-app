@@ -2,7 +2,8 @@ class TasksController < ApplicationController
   before_action :set_category
   def index
     @task = Task.new
-    @tasks = @category.tasks
+    @tasks = @category.tasks.order(deadline: :asc)
+    @category1 = Category.find(params[:category_id])
     @category = Category.new
   end
 
@@ -15,6 +16,12 @@ class TasksController < ApplicationController
       flash.now[:alert] = "メッセージを入力してください"
       render :index
     end
+  end
+
+  def destroy
+    @task = params[:task]
+    @task.destroy 
+    redirect_to category_tasks_path(@category), notice: 'メッセージが削除されました'
   end
 
   private

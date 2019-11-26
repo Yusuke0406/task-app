@@ -9,6 +9,7 @@
     .task__box{
       height: 25px;
       padding:15px 15px;
+      border-bottom: solid 1px gainsboro;
       &__name{
         float: left;
         .choise{
@@ -23,6 +24,9 @@
         float: right;
         margin-left:150px;
       }
+    }
+    .task__box:hover{
+      background-color: lightblue;
     }
   }
   .header{

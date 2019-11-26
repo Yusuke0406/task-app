@@ -2,7 +2,7 @@
   .form
     .form__message
       =form_for [@category,@task],url:category_tasks_path do|f|
-        =f.text_field :task_name, class: 'form__message', placeholder: 'Add category'
+        =f.text_field :task_name, class: 'form__message', placeholder: "#{@category1.cat_name}のタスクを追加"
         .form__mask
           =f.label :deadline, class: 'form__mask__image' do
             -# = fa_icon 'edit', class: 'icon'
@@ -12,7 +12,8 @@
     -@tasks.each do|task|
       .work
         .work__box
-          =check_box_tag :check1
+          =check_box_tag :check１
           =label_tag :check1,task.task_name
         .work__btn
+          =task.deadline
           = fa_icon 'heart-o', class: 'icon'

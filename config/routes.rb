@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: "categories#index"
   resources :users, only:[:update,:edit]
   resources :categories, only:[:index,:create] do
-    resources :tasks, only:[:index,:create]
+    resources :tasks, only:[:index,:create,:destroy]
   end
   # devise_scope :user do
   #   get 'login', to: 'devise/sessions#new'
