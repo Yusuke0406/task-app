@@ -23,6 +23,12 @@
       &__edit{
         float: right;
         margin-left:150px;
+        .pen{
+          color: black;
+        }
+        .pen:hover{
+          opacity:0.5;
+        }
       }
     }
     .task__box:hover{

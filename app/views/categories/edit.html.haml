@@ -11,8 +11,5 @@
             = fa_icon 'pencil', class: 'pen' 
   .header
     %a#fadetoggle_button{:href => "#"} ＋
-    .form
-      = form_for [@category],action:'POST',html:{id:'fadetoggle_menu'} do |f|
-        = f.text_field :cat_name, class: 'form__message', placeholder: 'Add category'
-        = f.submit 'Send', class: 'form__submit'
-
+.task
+  .task__edit

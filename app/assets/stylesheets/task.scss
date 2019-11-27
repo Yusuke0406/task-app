@@ -1,8 +1,8 @@
 .task{
   float: right;
   width: 80%;
-  height: calc(100vh - 56px);;
-  background-image: url("/sea.jpg");
+  height: calc(100vh - 56px);
+  background-image: url("/forest.jpg");
   background-size: cover;
   .form{
     padding:20px;
@@ -34,19 +34,25 @@
   }
   .works{
     margin-top: 10px;
+    height: calc(100vh - 150px);
+    overflow: scroll;
     .work{
+     
       width: 96%;
       background-color: #fff;
       height: 40px;
       border-radius: 3px;
       line-height: 40px;
       margin: 0 auto;
-      margin-top: 20px;
-
+      margin-top: 5px;
       &__box{
         float: left;
         position: relative;
         margin-left: 20px;
+        a:-webkit-any-link{
+          text-decoration: none;
+          color: black;
+        }
       }
       &__btn{
         float: right;

@@ -19,9 +19,9 @@ class TasksController < ApplicationController
   end
 
   def destroy
-    @task = params[:task]
-    @task.destroy 
-    redirect_to category_tasks_path(@category), notice: 'メッセージが削除されました'
+    @task = Task.find(params[:id])
+    @task.destroy
+    redirect_to  category_tasks_path(@category), notice: 'タスクが削除されました'
   end
 
   private

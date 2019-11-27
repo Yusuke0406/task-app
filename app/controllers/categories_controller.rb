@@ -10,9 +10,13 @@ class CategoriesController < ApplicationController
       redirect_to category_tasks_path(@category), notice: 'カテゴリーが作成されました'
     else
       flash[:notice] = "失敗しました"
-      render root_path(current_user.id)
+      render :index
     end
   end
+
+  # def edit
+  #   @category = Category.find(params[:id])
+  # end
 
   private
   def category_params
