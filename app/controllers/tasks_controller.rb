@@ -19,7 +19,7 @@ class TasksController < ApplicationController
   end
 
   def destroy
-    @task = Task.find(params[:id])
+    @task=Task.find(params[:id])
     @task.destroy
     redirect_to  category_tasks_path(@category), notice: 'タスクが削除されました'
   end
@@ -31,7 +31,7 @@ class TasksController < ApplicationController
   end
 
   def set_category
-    @category = Category.find(params[:category_id])
+    @category = Category.find_by(params[:category_id])
   end
 
 end

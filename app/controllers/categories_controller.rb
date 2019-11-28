@@ -14,9 +14,24 @@ class CategoriesController < ApplicationController
     end
   end
 
-  # def edit
-  #   @category = Category.find(params[:id])
-  # end
+  def edit
+    @category = Category.find_by(id:params[:id])
+  end
+  
+  def update
+    @category = Category.find_by(id:params[:id])
+    if @category.update(category_params)
+      redirect_to category_tasks_path(@category),notice: 'カテゴリーが編集されました'
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @category=Category.find_by(id:params[:id])
+    @category.destroy
+    render :index
+  end
 
   private
   def category_params

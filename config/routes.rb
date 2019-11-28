@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "categories#index"
   resources :users, only:[:update,:edit]
-  resources :categories, only:[:index,:create,:edit] do
+  resources :categories, only:[:index,:create,:edit,:update,:destroy] do
     resources :tasks, only:[:index,:create,:destroy]
   end
   # devise_scope :user do

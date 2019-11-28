@@ -13,7 +13,7 @@
       .work
         .work__box
           =check_box :task, :task_name, {class: "check1",:checked => ""}
-          =label_tag :check1,("#{link_to task.task_name,category_task_path(@category1,task),method: :DELITE}").html_safe 
+          =label_tag :check1,("#{link_to task.task_name,category_task_path(@category1.id,task), method: :delete }").html_safe 
         .work__btn
           =task.deadline
           = fa_icon 'heart-o', class: 'icon'

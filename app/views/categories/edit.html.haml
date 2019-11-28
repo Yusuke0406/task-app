@@ -13,3 +13,15 @@
     %a#fadetoggle_button{:href => "#"} ＋
 .task
   .task__edit
+    .account-page__inner--right.user-form
+    = form_for(@category) do |f|
+      .field
+        .field-label
+          = f.label :name
+        .field-input
+          = f.text_field :cat_name
+      .actions
+        = f.submit "Update", class: 'btn'
+
+    = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'link'
+    = link_to "カテゴリー削除",category_path, method: :delete, class: 'link'
