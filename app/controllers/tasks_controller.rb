@@ -10,7 +10,11 @@ class TasksController < ApplicationController
   def create
     @task = @category.tasks.new(task_params)
     if @task.save
-      redirect_to  category_tasks_path(@category), notice: 'メッセージが送信されました'
+      # flash[:notice] = 'タスクが追加されました'
+      respond_to do |format|
+        format.html {redirect_to  category_tasks_path(@category), notice: 'タスクが追加されました'}
+        format.json
+      end
     else
       @tasks = @category.tasks
       flash.now[:alert] = "メッセージを入力してください"
@@ -31,7 +35,7 @@ class TasksController < ApplicationController
   end
 
   def set_category
-    @category = Category.find_by(params[:category_id])
+    @category = Category.find(params[:category_id])
   end
 
 end

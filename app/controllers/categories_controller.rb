@@ -28,7 +28,7 @@ class CategoriesController < ApplicationController
   end
 
   def destroy
-    @category=Category.find_by(id:params[:id])
+    @category=Category.find_by(params[:id])
     @category.destroy
     render :index
   end

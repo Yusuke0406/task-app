@@ -1,13 +1,13 @@
 .task
   .form
     .form__message
-      =form_for [@category,@task],url:category_tasks_path do|f|
+      =form_for [@category,@task],url:category_tasks_path,html:{id:'new_task'} do|f|
         =f.text_field :task_name, class: 'form__message', placeholder: "#{@category1.cat_name}のタスクを追加"
         .form__mask
           =f.label :deadline, class: 'form__mask__image' do
             -# = fa_icon 'edit', class: 'icon'
             = f.date_field :deadline, class: 'hidden'
-      -# = f.submit 'Send', class: 'form__submit'   
+          = f.submit 'Send', class: 'form__submit'   
   .works
     -@tasks.each do|task|
       .work
