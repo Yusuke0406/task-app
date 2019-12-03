@@ -1,41 +1,61 @@
 .task{
   float: right;
   width: 80%;
-  height: calc(100vh - 56px);;
-  background-image: url("/avenue.jpg");
+  height: calc(100vh - 56px);
+  background-image: url("/bloon.jpg");
   background-size: cover;
   .form{
     padding:20px;
+    height: 40px;
     &__message{
       width: 100%;
       height: 40px;
       border-radius: 10px;
-      background-color: black;
-      opacity: 40%;
+      background-color:black;
+      opacity: 60%;
       position: relative;
+      color: white;
+      float: left;
     }
-    &__mask__calender{
-      .icon{
+    &__message::placeholder{
+      color: white;
+    }
+    &__mask__image{
+      float: right;
+      top: 10px;
+      position: absolute;
+      right: 10px;
+      .hidden{
+        background-color: black;
+        border: none;
         color: white;
-        right: 45px;
-        bottom: 717px;
-        position: absolute;
       }
+    }
+    &__submit{
+      display: none;
     }
   }
   .works{
-    margin-top: 20px;
+    margin-top: 10px;
+    height: calc(100vh - 150px);
+    overflow: scroll;
     .work{
-      margin-top: 3px;
-      width: 100%;
+     
+      width: 96%;
       background-color: #fff;
       height: 40px;
       border-radius: 3px;
       line-height: 40px;
+      margin: 0 auto;
+      margin-top: 5px;
       &__box{
         float: left;
         position: relative;
         margin-left: 20px;
+        a:-webkit-any-link{
+          text-decoration: none;
+          color: black;
+        }
       }
       &__btn{
         float: right;

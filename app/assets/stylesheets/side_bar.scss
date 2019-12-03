@@ -5,9 +5,11 @@
   background-color:ghostwhite;
   .tasks{
     height: 90%;
+    overflow: scroll;
     .task__box{
       height: 25px;
       padding:15px 15px;
+      border-bottom: solid 1px gainsboro;
       &__name{
         float: left;
         .choise{
@@ -21,7 +23,16 @@
       &__edit{
         float: right;
         margin-left:150px;
+        .pen{
+          color: black;
+        }
+        .pen:hover{
+          opacity:0.5;
+        }
       }
+    }
+    .task__box:hover{
+      background-color: lightblue;
     }
   }
   .header{
@@ -44,7 +55,7 @@
       &__message{
         border-radius: 8px;
         height: 30px;
-        border:2px solid cornflowerblue;
+        border:3px solid cornflowerblue;
       }
       &__submit{
         border: 1px solid white;

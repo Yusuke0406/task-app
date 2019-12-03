@@ -1,0 +1,43 @@
+.task{
+  &__edit{
+    width: 500px;
+    height: 200px;
+    background-color: #fff;
+    margin: 0 auto;
+    font-family: unset;
+    font-size: 20px;
+    text-align: center;
+    padding: 8px 19px;
+    color: #2c2c2f;
+    background: #cde4ff;
+    border-top: solid 5px #5989cf;
+    border-bottom: solid 5px #5989cf;
+    margin: 0 auto;
+    margin-top: 200px;
+    .field{
+      padding: 15px;
+      // margin-top: 10px;
+      .field-label{
+        padding: 10px;
+        font-size: 20px;
+        font-family: monospace;
+      }
+    }
+    .actions{
+      // margin-bottom: 30px;
+      margin-top: 10px;
+      .btn{
+        width: 100px;
+        border:2px solid cornflowerblue;
+        border-radius: 10px;
+      }
+    }
+    .link{
+      color:white;
+      background-color: gray;
+      // padding: 5px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    }
+  }

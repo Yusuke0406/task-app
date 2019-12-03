@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191122052429) do
+ActiveRecord::Schema.define(version: 20191128050533) do
 
   create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "cat_name",   limit: 10, null: false
+    t.string   "cat_name",   limit: 7, default: "", null: false
     t.integer  "user_id"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
     t.index ["user_id"], name: "index_categories_on_user_id", using: :btree
   end
 
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20191122052429) do
     t.integer  "category_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.date     "deadline"
     t.index ["category_id"], name: "index_tasks_on_category_id", using: :btree
     t.index ["user_id"], name: "index_tasks_on_user_id", using: :btree
   end
