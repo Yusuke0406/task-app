@@ -5,17 +5,13 @@
         =f.text_field :task_name, class: 'form__message', placeholder: "#{@category1.cat_name}のタスクを追加"
         .form__mask
           =f.label :deadline, class: 'form__mask__image' do
-            -# = fa_icon 'edit', class: 'icon'
             = f.date_field :deadline, class: 'hidden'
           = f.submit 'Send', class: 'form__submit'   
   .works
     -@tasks.each do|task|
       .work
         .work__box
-          =check_box :task, :task_name, {class: "check1",:checked => ""}
-          =label_tag :check1,("#{link_to task.task_name,category_task_path(@category1.id,task), method: :delete }").html_safe 
+          =label_tag :check1,task.task_name
         .work__btn
           =task.deadline
-          = fa_icon 'heart-o', class: 'icon'
-
-          -#  =form_for @task,url:category_task_path(@category1,task),method: :DELETE	 do|f|
+          =link_to "削除",category_task_path(@category1.id,task), method: :delete,class:"icon"

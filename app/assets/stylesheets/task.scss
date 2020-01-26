@@ -61,6 +61,14 @@
         float: right;
         position: relative;
         right: 20px;
+        text-decoration: none;
+        a{
+          text-decoration: none;
+          color: red;
+        }
+        a:hover{
+          opacity:0.5;
+        }
       }
     }
   }
